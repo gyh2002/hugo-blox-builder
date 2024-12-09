@@ -48,7 +48,8 @@ window.addEventListener("DOMContentLoaded", () => {
       // Hugo only applies `highlight` class when a language is specified on the Markdown block
       // But we need the `highlight` style to be applied so that absolute button has relative block parent
       codeblock.parentElement.classList.add('highlight');
-      wrapper = codeblock.parentNode;
+      // wrapper = codeblock.parentNode;
+      wrapper = codeblock;
     }
     copyBtn.addEventListener("click", () => copyCodeToClipboard(copyBtn, wrapper));
     wrapper.appendChild(copyBtn);
